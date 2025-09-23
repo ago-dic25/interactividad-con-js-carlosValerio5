@@ -1,189 +1,328 @@
 body{
-     font-family: sans-serif;
-     /*background-color: hotpink;*/
-     margin: 0;
-}
-ul {
-     list-style-type:none;
+   font-family: "Mozilla Text", sans-serif; 
 }
 
-nav{
-     background-color: white;  
-     border-radius:20px;
+h1 {
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 60px;
 }
 
-a{
-     text-decoration: none;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+	width: 100vw;
 }
 
-.tarjeta img {
-     width: 100%;
-     
+nav img{
+    flex-shrink: 0;
 }
 
-#menu {
-     display: none;
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 0;
+    padding: 0;
 }
 
-button {
-     border: none;
-     background-color: transparent;
-     padding: 20px;
+nav li{
+    margin: 10px;
 }
 
-#ads,#seeAll, #bestOfTheWeek, #travel{
-     border-radius: 50px;
+nav div{
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
-section img, aside img {
-     border-radius: 50px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.tarjeta {
-     margin: 20px 0;
+.fit_picture {
+    width: auto;
+    height: auto;
 }
 
-
-#travel {
-     position: relative;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-#travel span {
-     position: absolute;
-     background-color: white;
-     border-radius: 20px;
-     padding: 0 20px;
-     top: 20px;
-     left: 20px;
-     font-size: 50px;
+.first-main {
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-#travel button{
-     position: absolute;
-     background-color: white;
-     border-radius: 20px;
-     padding: 0 20px;
-     top: 80px;
-     left: 20px;
-     font-size: 40px;
+/**
+.first img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+**/
+
+.second-main {
+    width: 25%;
+    display: grid;
+    height: fit-content;
+    gap: 20px;
+    border-radius: 20px;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
 }
 
-#travel .info {
-     position: absolute;
-     
-     padding: 0 20px;
-     bottom: 20px;
-     right: 20px;
-     
+.second-main img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-
-
-#travel .info h2,
-#travel .info span {
-     font-size: 20px;
-     background-color: white;
-     border-radius: 20px;
-     margin: 10px 0;
+.second-main > button {
+    align-self: baseline;
+    width: 50px;
 }
 
-#travel .info span {
-     left: 0;
-     top: 0;
-     position: relative;
-}
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 15px;
+    height: fit-content;
 
-#ads {
-     background-color: lightgreen;
-}
-#seeAll {
-     background-color: lightblue;
-}
-
-#ads {
-     position: relative;
-     padding: 40px;
-     text-align: center;
-}
-#ads button {
-     position: absolute;
-     right: 20px;
-     top: 20px;
-     border: solid 1px black;
-     font-weight: bold;
-     border-radius: 50%; 
-     padding: 20px;    
-}
-#ads * {
-     display: block;
-}
-/*Breakpoints*/
-@media screen and (min-width: 769px){
-     main {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-     }
-     nav ul{
-          display: flex;
-          justify-content: space-around;
-     }
-     
-     section {
-          width: 60%;
-          display: flex;
-          flex-direction: column;
-     }
-     aside {
-          width: 30%;
-          margin: 0 auto;
-     }
-     #travel{
-          background-color: hotpink;
-     }
-     
-     
-     #ads,#seeAll {
-          margin: 20px 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
-}
-
-@media screen and (max-width:768px) {
-     nav {
-          border: solid 1px black;
-     }
-     #buscar {
-          display: none;
-     }
-     #menu {
-          display: block;
-          width: 100%;
-     }
-     nav ul {
-          display: none;
-     }
-     
-     #travel span{
-          font-size: 25px;
-     }
-     #travel button {
-          font-size: 20px;
-     }
 }
 
 
-@media screen and (orientation: landscape){
-     * {
-          display: block;
-     }
+.card button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-self: end;
 }
-.rojo {
-     background-color: red;
+
+.card h3 {
+    grid-row: 3;
+}
+
+.card a {
+    grid-row: 3;
+    justify-self: end;
+    align-self: center;
+}
+
+.card > a {
+    text-decoration: underline;
+}
+
+.fotos-container button {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.image_background {
+    background-image: url(spencer-plouzek-CG5l3VU4DLY-unsplash.jpg);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-first-main p{
+    background-color: white;
+    color: black;
+    display: inline-block;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.right-first-main > h1{
+    background-color: white;
+    margin-top: -4px;
+    margin-bottom: 0px;
+    color: black;
+    display: inline-block;
+    width: fit-content;
+    padding: 12px;
+    font-size: 38px;
+    margin-right: 30px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: normal;
+}
+
+.right-first-main > h1 ~ h1{
+    margin-top: -10px;
+    margin-bottom: 0px;
+    border-top-right-radius: 0px;
+}
+
+.right-first-main > h1:last-of-type{
+    border-bottom-left-radius: 20px;
+}
+
+.left-first-main ul{
+    border: solid white;
+    height: 20px;
+    width: 60px;
+    border-radius: 20px; 
+    justify-items: center;
+    color: white;
+}
+
+.left-first-main {
+    display: grid;
+    width: 50%;
+    grid-template-rows: 20px;
+    gap: 30px;
+}
+
+.left-first-main p{
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 16px;
+    border-radius: 20px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-first-main {
+    width: 50%;
+}
+
+@media screen and (max-width: 767px){
+    section {
+        display: grid;
+        margin-top: 0px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        margin-bottom: 0px;
+    }
+
+    .left-first-main p{
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .left-first-main ul{
+        font-size: 10px;
+        padding: 6px;
+        width: 40px;
+    }
+
+    .right-first-main h1 {
+        font-size: 16px;
+        margin-right: 30px;
+    }
+
+    .first-main {
+        width: 100%;
+        height: auto;
+    }
+
+    .second-main {
+        width: auto;
+    }
+
+    .image_background {
+        height: 65%;
+
+    }
+    
+    .second-main p{
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .second-main h3{
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .second-main img{
+        height: 30%;
+        overflow: hidden;
+    }
+	
+	#logo{
+		display: block;
+	}
 }
 
 .ocultar {
-     display: none;
+	display: none;
+}
+
+.mostrar {
+	display: block;
+}
+
+.dark {
+    background-color: #000;
+    color: #fff
+}
+
+.posts {
+    padding: 20px;
+}
+.post {
+    padding: 20px;
+    border: solid 1px lightblue;
+    margin: 10px 0;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 50%);
+    border-radius: 20px;
+}
+
+.light-mode {
+	color: black;
+	background-color: white;
+}
+
+.dark-mode {
+	color: white;
+	background-color: black;
+}
+
+#night-mode {
+	width: 50px;
+	height: 50px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 50%);
+	justify-self: baseline;
+	border-radius: 50%;
+	background-color: white;
+	border: none;
+}
+
+#logo {
+	display: none
 }
