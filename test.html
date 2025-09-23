@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Mi primer documento web</title>
+</head>
+<body class='light-mode'>
+    <nav>
+        <img src="Screenshot 2025-08-16 at 11.03.41 a.m..png" alt="logo" id= "logo">
+        <ul>
+            <li class="nav-item"><a href="#">Articles</a><sup>(460)</sup></li>
+            <li class="nav-item"><a href="#">Radio</a><sup>(8)</sup></li>
+            <li class="nav-item"><a href="#">Podcast</a><sup>(46)</sup></li>
+            <li class="nav-item"><a href="#">Be a writer</a></li>
+            <li class="nav-item"><a href="#">Talk to us</a></li>
+        </ul>
+        <div>
+            <button id="button-search">Search</button>
+			<input id="search-field" type="text" placeholder="Escribe tu busqueda"></input>
+            <button>Menu</button>
+        </div>
+    </nav>
+    <section>
+		<button id="night-mode">🌙/☀️</button>
+        <div class="first-main">
+            <h1>Best of the week</h1>
+            <a href="#" id="ver-todos">See all posts.</a>
+            <div class="posts ocultar" id="posts">
+                <div class="post">
+					Experiencia como podcaster.
+					<button id="post-1">LIKE</button>
+					<p id="counter-1">0</p>
+				</div>
+                <div class="post">
+					Como hacerte viral.
+					<button id="post-2">LIKE</button>
+					<p id="counter-2">0</p>
+				</div>
+                <div class="post">
+					Como crear reels para redes sociales.
+					<button id="post-3">LIKE</button>
+					<p id="counter-3">0</p>
+				</div>
+            </div>
+            <div class="image_background tarjeta">
+                <div class="left-first-main">
+                    <p>Sep 06, 2022</p>
+                    <ul>
+                        <li>Travel</li>
+                    </ul>
+                </div>
+                <div class="right-first-main">
+                    <p>Travel</p><br>
+                    <h1>Get to your dream now</h1>
+                    <h1>destinations with</h1>
+                    <h1>Travel Pro.</h1>
+                </div>
+            </div>
+            <!--<img src="spencer-plouzek-CG5l3VU4DLY-unsplash.jpg" alt="travel image">-->
+        </div>
+    <div class="second-main">
+        <div class="card tarjeta">
+            <p>ADS</p>
+            <button id="mas">+</button>
+            <p>Become A<br>broadcast member</p>
+            <h3>Real talk in a corporate world</h3>
+            <a href="#">learn more.</a>
+        </div>
+        <div class="fotos-container" id='image-gallery'>
+            <button id="ver-fotos">See all pics</button>
+            <div class="imagenes ocultar" id = "pics">
+                <img src="edoardo-giudici-saraval-NCVtwT6Lc7Q-unsplash.jpg" alt="porsche" class="grid-item mostrar" id="first-image">
+				<img src="spencer-plouzek-CG5l3VU4DLY-unsplash.jpg" alt="image" class="grid-item ocultar" id="second-image"/>
+				<img src="imagenes/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg" alt="image" class="grid-item ocultar" id="third-image"/>
+				<img src="imagenes/rachel-coyne-mTsotT-gMrY-unsplash.jpg" alt="image" class="grid-item ocultar" id="fourth-image"/>
+				<img src="imagenes/jukka-aalho-OaPksPcVp50-unsplash.jpg" alt="image" class="grid-item ocultar" id="fifth-image"/>
+				<img src="imagenes/soundtrap-n30_i7mx62o-unsplash.jpg" alt="image" class="grid-item ocultar" id="sixth-image"/>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="index.js"></script>
+</html>
